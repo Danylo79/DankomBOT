@@ -12,7 +12,7 @@ public class Token {
         JSONParser parser = new JSONParser();
         String out = "";
         try {
-            JSONObject obj = (JSONObject) parser.parse(new FileReader(new File("./src/main/resources/private.json")));
+            JSONObject obj = (JSONObject) parser.parse(new FileReader(new File("./private.json")));
             out = obj.get("token").toString();
         } catch (Exception e) {
             e.printStackTrace();

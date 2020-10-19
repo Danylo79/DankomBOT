@@ -7,10 +7,9 @@ public class Main {
     private static JDA jda;
     private static JDABuilder jdaBuilder;
 
-    public static void init(JDA jda, JDABuilder jdaBuilder) {
-
-        Main.jda = jda;
-        Main.jdaBuilder = jdaBuilder;
+    public Main(JDA jda, JDABuilder jdaBuilder) {
+        this.jda = jda;
+        this.jdaBuilder = jdaBuilder;
     }
 
     public static JDA getJda() {

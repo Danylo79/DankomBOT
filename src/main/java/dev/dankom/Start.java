@@ -36,6 +36,6 @@ public class Start {
         // Set activity (like "playing Something")
         jda = builder.build();
 
-        Main.init(jda, builder);
+        new Main(jda, builder);
     }
 }
