@@ -1,5 +1,5 @@
-package dev.dankom.command;
+package dev.dankom.bot.command;
 
 public class CommandListener {
-    
+
 }
