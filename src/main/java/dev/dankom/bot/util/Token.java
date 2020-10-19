@@ -1,8 +1,10 @@
-package dev.dankom.bot;
+package dev.dankom.bot.util;
 
 import com.google.gson.JsonObject;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import java.io.File;
 import java.io.FileReader;
 
 public class Token {
@@ -10,8 +12,8 @@ public class Token {
         JSONParser parser = new JSONParser();
         String out = "";
         try {
-            JsonObject obj = (JsonObject) parser.parse(new FileReader("/DiscordTest/src/main/resources/private.json"));
-            out = obj.get("token").getAsString();
+            JSONObject obj = (JSONObject) parser.parse(new FileReader(new File("./src/main/resources/private.json")));
+            out = obj.get("token").toString();
         } catch (Exception e) {
             e.printStackTrace();
         }
