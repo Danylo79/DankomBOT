@@ -9,7 +9,7 @@ public class Main {
     private JDA jda;
 
     public Main() throws LoginException {
-        String token = Token.token;
+        String token = Token.getToken();
         jda = JDABuilder.createDefault(token).build();
     }
 }
